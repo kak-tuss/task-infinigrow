@@ -1,0 +1,13 @@
+<div *ngFor="let channel of channels$ | async">
+    <div  class="channel">
+        <app-channel 
+            [channel]="channel" 
+            [open]="channel.id === selectedId" 
+            (channelClicked)="selectChannel($event)">
+        </app-channel>
+        <app-breakdown *ngIf="channel.id === selectedId" 
+            [channel]="channel">
+        </app-breakdown>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+:host {
+    display: block;
+    height: 36px;
+    padding: 8px 23px 8px 16px;
+    .channel__arrow {
+        margin-right: 37px;
+    }
+    &.open {
+        .channel__arrow {
+            transform: rotate(90deg);
+        }
+    }
+    .channel__icon {
+        margin-right: 12px;
+        margin-bottom: -13px;
+    }
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    .category {
+        color: #b2bbd5;
+        font-style: italic;
+        font-weight: normal;
+    }
+    .actions {
+        float: right;
+        margin-top: 2px;
+        .budget_status {
+            color: #222A41;
+            font-family: Avenir Next;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 36px;
+            img {
+                margin-bottom: -8px;
+                margin-left: 8px;
+            }
+            margin-right: 32px;
+        }
+        .context_menu {
+            margin-top: 5px;
+            float: right;
+        }
+    }
+}

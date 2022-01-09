@@ -10,6 +10,9 @@
             transform: rotate(90deg);
         }
     }
+    &.no-budget {
+        background-color: #ffffff;
+    }
     .channel__icon {
         margin-right: 12px;
         margin-bottom: -13px;

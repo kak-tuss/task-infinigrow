@@ -8,18 +8,22 @@ import { BreakdownComponent } from './breakdown/breakdown.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FormsModule } from '@angular/forms';
+import { SwitchComponent } from './switch/switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BuilderComponent,
     ChannelComponent,
-    BreakdownComponent
+    BreakdownComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     MatTooltipModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

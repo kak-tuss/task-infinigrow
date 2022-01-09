@@ -3,10 +3,10 @@
 {{channel.name}}
 <span class="category">({{channel.category}})</span>
 <div class="actions">
-    <span class="budget_status" *ngIf="getTotalBudget(channel.budget) === 0">
+    <span class="budget_status" *ngIf="!getTotalBudget()">
         No budget <img src="../../assets/images/exchlamation.svg">
     </span>
-    <span class="budget_status" *ngIf="getTotalBudget(channel.budget) != 0"
+    <span class="budget_status" *ngIf="getTotalBudget()"
         ><img src="../../assets/images/check.svg">
     </span>
     <span class="context_menu"><img src="../../assets/images/dots.svg"></span>

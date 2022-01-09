@@ -3,23 +3,29 @@
         Budget frequency
         <img src="../../assets/images/info.svg" 
         matTooltip="You can set a yearly, quarterly or monthly budget for this channel">
-        <select>
-            <option value>Anually</option>
-            <option value>Quarterly</option>
-            <option value>Monthly</option>
+        <select [(ngModel)]="selectedFrequency">
+            <option *ngFor="let opt of frequency; let index = index" [value]="{'index': index, 'value': opt}">{{opt}}</option>
         </select>
     </label>
 
     <label>
-        Baseline [Annual] Budget
+        Baseline {{frequencyNoun[selectedFrequency.index]}} Budget
         <img src="../../assets/images/info.svg" 
         matTooltip="Set an annual budget for this channel - you'll be able to break it down to months in the following step.">
+        <div class="clearer">
+            <select [(ngModel)]="channel.currency" class="currency">
+                <option value="$">$</option>
+                <option value="€">€</option>
+            </select>
+            <input type="text" [value]="totalBudget" />
+        </div>
     </label>
 
     <label>
         Budget allocation
         <img src="../../assets/images/info.svg" 
         matTooltip="Decide how to distribute your yearly budget across months: Equally (equal monthly budget), Manually (manually srt a monthly budget), of by Growth Rate (increase monthly budget by a set percentage)">
+        <app-switch (valueChanged)="manualSwitchChange($event)"></app-switch>
     </label>
 </div>
 
@@ -29,7 +35,6 @@
     <!-- <div class="editor">
         {{channel.frequency}}
         {{channel.currency}}
-        {{channel.allocation}}
         {{channel.budget}}
         
     </div> -->

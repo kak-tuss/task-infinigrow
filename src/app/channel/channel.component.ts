@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, HostListener, EventEmitter, Output, HostBinding } from '@angular/core';
-import { Budget, BudgetData } from '../interfaces';
+import { BudgetData } from '../interfaces';
 
 @Component({
   selector: 'app-channel',
@@ -15,7 +15,8 @@ export class ChannelComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @HostBinding('class.open') get isOpen() { return this.open; }
+  @HostBinding('class.no-budget') get hasNoBudget() {return !this.getTotalBudget() };
+  @HostBinding('class.open') get isOpen() { return this.open; };
   @HostListener('click')
   onClick(e) {
     console.log(this.channel);
@@ -26,10 +27,10 @@ export class ChannelComponent implements OnInit {
     return `../../assets/images/${imgName}.svg`;
   }
 
-  getTotalBudget(budget: Budget): number {
+  getTotalBudget(): number {
     const aggregator = (previousValue, currentValue) => previousValue + currentValue;
 
-    return budget.breakdown.reduce(aggregator);
+    return this.channel.budget.breakdown.reduce(aggregator);
   }
 
 }

@@ -1,0 +1,5 @@
+<div class="clearer">
+    <span [ngClass]="{selected: allocation}" (click)="setAllocation(allocationAuto)">Equal</span>
+    <span [ngClass]="{selected: !allocation}" (click)="setAllocation(allocationManual)">Manual</span>
+</div>
+<input type="checkbox" name="allocationSwitch" (click)="cbClick($event);" [(ngModel)]=allocation/>

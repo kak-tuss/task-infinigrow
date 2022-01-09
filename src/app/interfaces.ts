@@ -1,3 +1,6 @@
+export const ALLOCATION_MANUAL = false;
+export const ALLOCATION_AUTO = true;
+
 export enum MONTHS {
     JANUARY, FEBRUARY, MARCH, APRIL, 
     MAY, JUNE, JULY, AUGUST, 
@@ -31,6 +34,5 @@ export interface BudgetData {
     icon: string;
     frequency: FREQUENCY;
     currency: string;
-    allocation: boolean;
     budget: Budget;
 }

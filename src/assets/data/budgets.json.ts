@@ -8,7 +8,6 @@ export const DATA: BudgetData[] = [
         'icon': 'displayAdsGoogleAdWordsIcon',
         'frequency': FREQUENCY.ANNUALLY,
         'currency': '$',
-        'allocation': true,
         'budget': {
             breakdown: [ 
                 1000, 1000, 1000, 1000, 
@@ -25,7 +24,6 @@ export const DATA: BudgetData[] = [
         'icon': 'organisingEventIcon',
         'frequency': FREQUENCY.QUARTERLY,
         'currency': '$',
-        'allocation': true,
         'budget': {
             breakdown: [ 
                 6000, 6000, 7000, 6000 
@@ -40,7 +38,6 @@ export const DATA: BudgetData[] = [
         'icon': 'paidReviewsIcon',
         'frequency': FREQUENCY.MONTHLY,
         'currency': '$',
-        'allocation': true,
         'budget': {
             breakdown: [ 
                 6000

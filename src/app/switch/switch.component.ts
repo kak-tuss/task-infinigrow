@@ -14,7 +14,6 @@ export class SwitchComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { 
-    console.log('init', this.allocation);
   }
 
   setAllocation(newAllocation) {

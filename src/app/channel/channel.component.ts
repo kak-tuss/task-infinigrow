@@ -19,7 +19,6 @@ export class ChannelComponent implements OnInit {
   @HostBinding('class.open') get isOpen() { return this.open; };
   @HostListener('click')
   onClick(e) {
-    console.log(this.channel);
     this.channelClicked.emit(this.channel);
   }
   
